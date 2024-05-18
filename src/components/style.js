@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const StyledHopePage = styled.div`
-  display: "flex";
+export const StyledHomePage = styled.div`
+  display: flex;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -630,7 +630,7 @@ export const StyledHopePage = styled.div`
   }
 `;
 export const StyledHomeContainer = styled.div`
-  display: "flex";
+  display: flex;
   width: 100%;
   height: 100vh;
   justify-content: space-between;

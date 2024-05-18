@@ -5,7 +5,7 @@ export const StyledProjectContainer = styled.div`
   width: 95%;
   padding: 2vh;
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 1h;
+  border-radius: 1vh;
   font-weight: bold;
   text-align: start;
   font-size: 1.9vh;

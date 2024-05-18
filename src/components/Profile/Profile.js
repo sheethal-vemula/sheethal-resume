@@ -1,5 +1,5 @@
 import React from "react";
-import image from "/. /images/profile-image.avif";
+import image from "../../images/profile-image-1.jpeg";
 import {
   StyledProfileContainer,
   StyledProfileBody,
@@ -8,19 +8,20 @@ import {
   StyledProfileImage,
   StyledBodyIndividualDiv,
   StyledBodyMain,
-} from " ./StyledProfile";
+} from "./StyledProfile";
 import StayPrimaryPortraitIcon from "@mui/icons-material/StayPrimaryPortrait";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import DownloadIcon from "@mui/icons-material/Download";
 import resume from "../../assets/resume.pdf";
+
 function Profile() {
   const onDownloadClick = () => {
     const pdfUrl = resume;
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download - "SheethalResume.pdf";
+    link.download = "SheethalResume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

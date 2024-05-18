@@ -2,14 +2,13 @@ import React from "react";
 import { useState } from "react";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
 import {
   StyledSliderContainer,
   StyledSliderIcons,
   StyledSliderBox,
 } from "./StyledSlider";
-import sliderstore from "../../stores/slider-store";
+import sliderStore from "../../stores/slider-store";
 
 function Slider() {
   const { selectedTab, setSelectedTab } = sliderStore();
@@ -24,10 +23,10 @@ function Slider() {
     <StyledSliderContainer>
       <StyledSliderBox
         isSelected={activeTab === "About"}
-        onclick={() => handleTabClick("About")}
+        onClick={() => handleTabClick("About")}
       >
         <StyledSliderIcons>
-          <DescriptionOutlinedIcon
+          <PermIdentityOutlinedIcon
             sx={{
               fontsize: "2.7vh",
               color: `${activeTab === "About" ? "black" : "orange"}`,
@@ -38,7 +37,7 @@ function Slider() {
       </StyledSliderBox>
       <StyledSliderBox
         isSelected={activeTab === "Resume"}
-        onclick={() => handleTabClick("Resume")}
+        onClick={() => handleTabClick("Resume")}
       >
         <StyledSliderIcons>
           <DescriptionOutlinedIcon
@@ -52,10 +51,10 @@ function Slider() {
       </StyledSliderBox>
       <StyledSliderBox
         isSelected={activeTab === "Works"}
-        onclick={() => handleTabClick("Works")}
+        onClick={() => handleTabClick("Works")}
       >
         <StyledSliderIcons>
-          <DescriptionOutlinedIcon
+          <BusinessCenterOutlinedIcon
             sx={{
               fontsize: "2.7vh",
               color: `${activeTab === "Works" ? "black" : "blue"}`,

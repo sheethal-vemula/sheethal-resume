@@ -1,48 +1,112 @@
 import styled from "styled-components";
-export const StyledSliderContainer = styled.div`
+export const StyledProfileContainer = styled.div`
   display: flex;
-  width: 4%;
-  height: 25vh;
+  width: 22%;
+  height: 90vh;
   position: relative;
-  padding: 1vh;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  background: rgba (255, 255, 255, 0.2);
-  margin-bottom: 63vh;
+  align-items: center;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  animation: slideRight 1s ease-in-out;
-  @keyframes slideRight {
+  animation: slideIn 0.8s ease-in-out;
+  @keyframes slideIn {
     0% {
-      transform: translateX(200%);
+      transform: translateY(100%);
     }
     100% {
-      transform: translatex(0);
+      transform: translateY(0%);
     }
   }
 `;
-export const StyledsliderBox = styled.div`
+
+export const StyledProfileImage = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 28%;
+  gap: 4vh;
+  position: relative;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1;
+  margin-top: -30%;
+  img {
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    background: ${({ isSelected }) = isSelected ? 'linear-gradient(#0a7efa,#2elafa)' : 'white'};
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    :hover {
-    background-color:${({ isSelected }) => isSelected ? '' : ''};
-    cursor: pointer;
-}
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
 `;
-export const StyledSliderIcons = styled.button`
+
+export const StyledProfileBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 20px 4px;
+`;
+export const StyledBodyMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: fit-content;
+  margin-top: 18vh;
+  background: rgba(0, 0, 0, 0.15);
+  gap: 1vh;
+  padding: 2vh;
+  border-radius: 1vh;
+`;
+export const StyledBodyIndividualDiv = styled.div`
+  display: flex;
+  padding: 1vh;
+  gap: 2vh;
+  align-items: center;
+  .styledBodyIndividualIcon {
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+    height: 3vh;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1vh;
+  }
+  .styledBodyIndividualContent {
     display: flex;
     flex-direction: column;
-    width: 7vh;
-    height: 6vh; font-size: 1.4vh;
-    background: rgba(255, 255, 255, 0.6);
-    justify-content: center;
-    align-items:center;
-    border-radius: 10px;
-    padding: 1vh; 
-    gap: 0.3vh;
-    border:none;
-`
+    align-items: flex-start;
+  }
+  .styledLabelHeader {
+    font-size: 1.5vh;
+  }
+  .styledLabelContent {
+    font-size: 1.7vh;
+    font-weight: bold;
+  }
+`;
+
+export const StyledBodyDivisionLine = styled.div`
+  width: 100%;
+  background: black;
+  height: 0.1vh;
+`;
+export const StyledDownloadButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  padding: 0.8vh;
+  margin: 2vh;
+  border-radius: 1vh;
+  background: transparent;
+  font-size: 1.5vh;
+  font-weight: bold;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+  }
+`;

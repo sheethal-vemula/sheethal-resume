@@ -10,7 +10,7 @@ import ExpandCircleDownOutlinedIcon from "@mui/icons-material/ExpandCircleDownOu
 import {
   StyledProjectContainer,
   StyledProjectInformation,
-} from "./StyledvorkPage";
+} from "./StyledWorkPage";
 import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 const Works = () => {
@@ -99,7 +99,7 @@ const Works = () => {
       <label
         style={{
           fontSize: "2.5vh",
-          fontweight: "bold",
+          fontWeight: "bold",
           display: "flex",
           alignItems: "center",
           gap: "1vh",
@@ -121,9 +121,9 @@ const Works = () => {
                 })
               );
             } else {
-              setIndexData((prevata) => [
+              setIndexData((prevData) => [
                 ...prevData,
-                { index, arrowclicked: true },
+                { index, arrowClicked: true },
               ]);
             }
           }}
@@ -132,19 +132,19 @@ const Works = () => {
             style={{
               display: "flex",
               width: "100%",
-              justifycontent: "space-between",
-              alignitems: "center",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             {project.projectName}
             <ExpandCircleDownOutlinedIcon />
           </div>
           <div style={{ fontWeight: "normal", fontSize: "1.8vh" }}>
-            {project.timeLine}
+            ({project.timeLine})
           </div>
           <StyledProjectInformation>
-            {indexData.map((date) => {
-              if ((date, index === index && data.arrowclicked)) {
+            {indexData.map((data) => {
+              if (data.index === index && data.arrowClicked) {
                 return <div>{project.projectDetails}</div>;
               }
             })}
@@ -172,7 +172,7 @@ const Works = () => {
           gap: "1vh",
         }}
       >
-        {secondaryEndeavours.map((endeavour, index) => {
+        {secondaryEndeavours.map((endeavour, index) => (
           <div
             style={{
               display: "flex",
@@ -197,8 +197,8 @@ const Works = () => {
               {index}
             </div>
             {endeavour}
-          </div>;
-        })}
+          </div>
+        ))}
       </div>
     </StyledPageContainer>
   );
